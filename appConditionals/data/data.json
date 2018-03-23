@@ -1,0 +1,29 @@
+   {
+   "fisharray": [{
+    "name": "Largemouth Bass",
+    "description": "Large mouth Bass are a freshwater species known to have large mouths in order to eat fairly large prayfish and pretty much anything living thats possible to eat for them. One of the most popular fish for sport.",
+    "imgURL": "images/bass_largemouth.png"
+},
+{
+    "name": "Catfish", 
+    "description": "Bottom feeding fish that are fun to catch and good to eat, can grow to very large sizes.",
+    "imgURL": "images/catfish.png"
+},
+{
+    "name": "Rainbow Trout",
+    "description": "Known for their vivid colors and markings, they are usually a favorite catch for fly fishemen",
+    "imgURL": "images/Rainbow_trout.png"
+},
+{
+    "name": "Bluegill",
+    "description": "Bluegill are known to be in lakes and ponds, eat mostly insects and their larvae.  One of the largemouth bass's go to pray food.",
+    "imgURL": "images/Bluegill.png"
+},
+{
+    "name": "Smallmouth Bass",
+    "description": "these fish are like the largemouth bass, but have a bit of a smaller mouth like the name suggests.  Known to be in large clear water lakes.  Another one of fishings sport fish.",
+    "imgURL": "images/Smallmouth_bass.png"
+}
+
+]
+   }
