@@ -2,14 +2,25 @@ $(function(){
     $.getJSON('api', updateFeedback)
 
     $('.feedback-form').submit(function(e){
-        e.preventdefault();
+        e.preventDefault();
         $.post('api', {
             name: $('#feedback-form-name').val(),
             title: $('#feedback-form-title').val(),
             message: $('#feedback-form-message').val()
           }, updateFeedback);
         });
-      
+
+    $('.feedback-delete').click(function(e){
+      console.log(e.target.id);
+      e.preventDefault();
+      $.ajax({
+        url: '/api/0',
+        type: 'DELETE',
+        success: function(result) {
+            // Do something with the result
+        }
+    });
+    })    
         
       
         function updateFeedback(data) {

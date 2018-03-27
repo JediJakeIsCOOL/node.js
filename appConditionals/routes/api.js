@@ -13,15 +13,22 @@ router.use(bodyparser.urlencoded({ extended: false}))
 
 router.post('/api', function(req, res){
     feedbackData.unshift(req.body);
-    fs.writeFile('data/feedback.json', JSON.stringify(feedbackData), 'utf8', function(err){
+    fs.writeFile('./data/feedback.json', JSON.stringify(feedbackData), 'utf8', function(err){
         if (err){
             console.log(err)
         }
     })
     res.json(feedbackData)
 })
-
-
+router.delete('/api/:id', function(req, res) {
+    feedbackData.splice(req.params.id, 1);
+    fs.writeFile('./data/feedback.json', JSON.stringify(feedbackData), 'utf8', function(err) {
+      if (err) {
+        console.log(err);
+      }
+    });
+    res.json(feedbackData);
+  });
 
 
 module.exports = router
