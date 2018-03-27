@@ -6,13 +6,17 @@
 
 // var st = contents.split("\n");
 // console.log(st.length-1);
-var fs = require('fs')
-fs.readFile(process.argv[2], function(error, data) {
-    if (error){
-    console.error(error.message);
-    return;
-    }
-    var contents = data.toString().split('\n').length-1
+// var fs = require('fs')
+// fs.readFile(process.argv[2], function(error, data) {
+//     if (error){
+//     console.error(error.message);
+//     return;
+//     }
+//     var contents = data.toString().split('\n').length-1
     
-    console.log(contents)    
-})  //whats the point of else if you can just write the backup function after an if
+//     console.log(contents)    
+// })  //whats the point of else if you can just write the backup function after an if
+
+var fs = require('fs')
+fs.readdir(error, ;
+)

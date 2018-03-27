@@ -1,17 +1,24 @@
 var express = require('express')
 var router = express.Router()
-var data = req.app.get('appData')
+// var data = require('./data/data.json')
 
 router.get('/bluegill', function(req, res){
-    var tosend ={}
-    data.arrayfish.forEach(function(item){
+    var data = req.app.get('appData');
+    var tosend ={};
+    var namesend ={}
+    
+    data.fisharray.forEach(function(item){
         if (item.name === 'Bluegill'){
             tosend =item.imgURL;
+            namesend = item.name
+            describesend = item.description
         }
     })
-
+   
     res.render('index', {
-        image: tosend
+        image : tosend,
+        header : namesend,
+        describe : describesend
     })
 })
 

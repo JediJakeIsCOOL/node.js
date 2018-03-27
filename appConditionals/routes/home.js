@@ -1,16 +1,16 @@
 var express = require('express')
 var router = express.Router()
 
-var data = req.app.get('appData')
-router.get('/', function(req, res) {
-    data.speakers.forEach(function(item) {
-        pagePhotos = pagePhotos.concact(item.artwork)
+
+router.get('/home', function(req, res) {
+    var data = req.app.get('appData')
+    var pagePhotos = []
+    data.fisharray.forEach(function(item) {
+        pagePhotos.push(item.imgURL)
         
     });
-    res.render('index', {
-        pageTitle: 'Home',
-        pageID: 'woah',
-        artwork: pagePhotos,
+    res.render('home', {
+        image: pagePhotos,
     })
 
         
