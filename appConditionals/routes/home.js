@@ -11,6 +11,7 @@ router.get('/home', function(req, res) {
     });
     res.render('home', {
         image: pagePhotos,
+        pageID : 'home'
     })
 
         
